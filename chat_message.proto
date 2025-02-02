@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package ="in.haxxon420.grpc.models";
+option java_outer_classname = "ChatMessage";
+
+option dart_package = "in.haxxon420.grpc.models";
+
+
+package models;
+
+message ChatMessage {
+    string sender = 1;
+    string receiver = 2;
+    string message = 3;
+}
+
+service ChatService {
+    rpc Chat(stream ChatMessage) returns (stream ChatMessage);
+}
+
+
+
