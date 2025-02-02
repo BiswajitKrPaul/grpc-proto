@@ -13,7 +13,7 @@ message User {
   string mobile = 2;
   string role = 3;
   bool isOnline = 4;
-  google.protobuf.Timestamp last_seen_at = 1;
+  google.protobuf.Timestamp last_seen_at = 5;
 }
 
 service UserService {
